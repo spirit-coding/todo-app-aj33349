@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CreateTodoComponent } from './create-todo/create-todo.component';
 import { FormsModule }   from '@angular/forms';
+import { ServicesModule } from './services/services.module';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { FormsModule }   from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ServicesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
