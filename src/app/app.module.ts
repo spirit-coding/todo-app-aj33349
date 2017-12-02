@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { CreateTodoComponent } from './create-todo/create-todo.component';
 import { FormsModule }   from '@angular/forms';
 import { ServicesModule } from './services/services.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { ServicesModule } from './services/services.module';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ServicesModule
+    ServicesModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

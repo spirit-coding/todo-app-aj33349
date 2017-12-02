@@ -19,7 +19,7 @@ export class CreateTodoComponent implements OnInit {
 
   onSubmit({ value, valid }: { value: Todo, valid: boolean }) {
     if (valid)
-      this.todoService.createToDo(value);
+      this.todoService.createToDo(this.toDo);
   }
 
 }
