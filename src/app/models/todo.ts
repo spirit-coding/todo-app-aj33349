@@ -1,4 +1,4 @@
-export class ToDo {
+export class Todo {
     completedDate: Date;
     createdDate: Date;
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ToDo } from '../models/to-do';
+import { Todo } from '../models/todo';
+import { TodoService } from '../services/todo.service';
 
 
 @Component({
@@ -8,15 +9,15 @@ import { ToDo } from '../models/to-do';
   styles: []
 })
 export class CreateTodoComponent implements OnInit {
-  public toDo: ToDo;
+  public toDo: Todo;
 
-  constructor() { }
+  constructor(private todoService: TodoService) { }
 
   ngOnInit() {
-    this.toDo = new ToDo('Boodschappen doen', false, 'Ik moet eten hebben')
+    this.toDo = new Todo('Boodschappen doen', false, 'Ik moet eten hebben')
   }
 
-  onSubmit({ value, valid }: { value: ToDo, valid: boolean }) {
+  onSubmit({ value, valid }: { value: Todo, valid: boolean }) {
     if (valid)
       console.log(this.toDo);
   }
