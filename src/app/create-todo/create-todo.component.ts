@@ -16,9 +16,9 @@ export class CreateTodoComponent implements OnInit {
     this.toDo = new ToDo('Boodschappen doen', false, 'Ik moet eten hebben')
   }
 
-  onSubmit()
-  {
-    console.log(this.toDo);
+  onSubmit({ value, valid }: { value: ToDo, valid: boolean }) {
+    if (valid)
+      console.log(this.toDo);
   }
 
 }
