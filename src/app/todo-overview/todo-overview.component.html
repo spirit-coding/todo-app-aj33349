@@ -7,7 +7,7 @@
         <div class="panel-body">{{todo.description}}</div>
         <div class="panel-footer"  *ngIf="!todo.completed">
           <button class="btn btn-success" (click)="setCompleted(todo)">Complete</button>
-          <button class="btn btn-delete" (click)="delete(todo)">Delete</button>
+          <button class="btn btn-danger" (click)="delete(todo)">Delete</button>
         </div>
       </div>
     </div>
