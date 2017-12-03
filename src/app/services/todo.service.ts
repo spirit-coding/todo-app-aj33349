@@ -23,4 +23,12 @@ export class TodoService {
   public getToDos(): Observable<Todo[]> {
     return this.http.get<Todo[]>('http://localhost:8080/api/todo');
   }
+
+  public getCompletedToDos(): Observable<Todo[]> {
+    return this.http.get<Todo[]>('http://localhost:8080/api/todo/completed');
+  }
+
+  public getUncompletedToDos(): Observable<Todo[]> {
+    return this.http.get<Todo[]>('http://localhost:8080/api/todo/uncompleted');
+  }
 }

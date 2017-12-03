@@ -11,13 +11,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { TodoOverviewComponent } from './todo-overview/todo-overview.component';
 import { ConfirmDialogModule, ConfirmationService } from 'primeng/primeng';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CreateTodoComponent,
-    TodoOverviewComponent
+    TodoOverviewComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
