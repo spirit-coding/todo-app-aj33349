@@ -8,6 +8,10 @@ export class TodoService {
 
   constructor(private http: HttpClient) { }
 
+  public updateToDo(todo: Todo, todoId: string): Observable<Todo> {
+    return this.http.put<Todo>(`http://localhost:8080/api/todo/${todoId}`, todo);
+  }
+
   public createToDo(todo: Todo): Observable<Todo> {
     return this.http.post<Todo>('http://localhost:8080/api/todo', todo);
   }

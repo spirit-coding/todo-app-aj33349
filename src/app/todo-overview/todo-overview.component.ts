@@ -13,9 +13,27 @@ export class TodoOverviewComponent implements OnInit {
   constructor(private todoService: TodoService) { }
 
   ngOnInit() {
+    this.getToDos();
+  }
+
+  getToDos(){
     this.todoService.getToDos().subscribe(     
       data => {
         this.todos = data;
+      },
+      err => { 
+        alert('Something went wrong!');
+      }
+    );
+  }
+
+  setCompleted(todo: Todo)
+  {
+    todo.completed = true;
+   
+    this.todoService.updateToDo(todo, todo._id).subscribe(     
+      data => {
+        this.getToDos();
       },
       err => { 
         alert('Something went wrong!');

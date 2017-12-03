@@ -1,4 +1,5 @@
 export class Todo {
+    _id: string;
     completedDate: Date;
     createdDate: Date;
 

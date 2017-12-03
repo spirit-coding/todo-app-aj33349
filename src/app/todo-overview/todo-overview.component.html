@@ -5,6 +5,9 @@
       <div class="panel panel-default">
         <div class="panel-heading">{{todo.title}}</div>
         <div class="panel-body">{{todo.description}}</div>
+        <div class="panel-footer"  *ngIf="!todo.completed">
+          <button class="btn btn-success" (click)="setCompleted(todo)">Complete</button>
+        </div>
       </div>
     </div>
   </div>
