@@ -5,10 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { CreateTodoComponent } from './create-todo/create-todo.component';
-import { FormsModule }   from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { ServicesModule } from './services/services.module';
 import { HttpClientModule } from '@angular/common/http';
 import { TodoOverviewComponent } from './todo-overview/todo-overview.component';
+import { ConfirmDialogModule, ConfirmationService } from 'primeng/primeng';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -22,9 +24,11 @@ import { TodoOverviewComponent } from './todo-overview/todo-overview.component';
     AppRoutingModule,
     FormsModule,
     ServicesModule,
-    HttpClientModule
+    HttpClientModule,
+    ConfirmDialogModule,
+    BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [ConfirmationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

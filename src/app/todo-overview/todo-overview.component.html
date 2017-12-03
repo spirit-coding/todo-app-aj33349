@@ -7,8 +7,11 @@
         <div class="panel-body">{{todo.description}}</div>
         <div class="panel-footer"  *ngIf="!todo.completed">
           <button class="btn btn-success" (click)="setCompleted(todo)">Complete</button>
+          <button class="btn btn-delete" (click)="delete(todo)">Delete</button>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<p-confirmDialog header="Confirmation" icon="fa fa-question-circle" width="425"></p-confirmDialog>

@@ -12,6 +12,10 @@ export class TodoService {
     return this.http.put<Todo>(`http://localhost:8080/api/todo/${todoId}`, todo);
   }
 
+  public deleteToDo(todoId: string): Observable<Todo> {
+    return this.http.delete<Todo>(`http://localhost:8080/api/todo/${todoId}`);
+  }
+
   public createToDo(todo: Todo): Observable<Todo> {
     return this.http.post<Todo>('http://localhost:8080/api/todo', todo);
   }
