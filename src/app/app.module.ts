@@ -8,12 +8,14 @@ import { CreateTodoComponent } from './create-todo/create-todo.component';
 import { FormsModule }   from '@angular/forms';
 import { ServicesModule } from './services/services.module';
 import { HttpClientModule } from '@angular/common/http';
+import { TodoOverviewComponent } from './todo-overview/todo-overview.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CreateTodoComponent
+    CreateTodoComponent,
+    TodoOverviewComponent
   ],
   imports: [
     BrowserModule,
